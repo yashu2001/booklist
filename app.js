@@ -41,6 +41,9 @@ class Ui{
     //this method is called during startup to display all books added earlier
     static display(){
         const list=Store.getbooks();
+        if(list===null){
+            return
+        }
         list.forEach(element => {
             const row=document.createElement('tr');
             row.innerHTML=`<td>${element.title}</td><td>${element.author}</td><td>${element.isbn}</td><td><a href="#" id="delete"><i class="material-icons" style="color:red">close</i></a></td>`;
