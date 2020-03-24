@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Booklist</title>
+    <style>
+        label{
+            color:black;
+            font-size: 150%;
+        }
+        .btn{
+            margin-top: 3em;;
+        }
+    </style>
+</head>
+<body>
+    <div class="container z-depth-2">
+        <h4 class="center">Booklist App</h4>
+        <h6 class="center white-text" style="display:none" id="message"></h6>
+        <hr>
+        <div class="row">
+            <div class="col s6">
+                <label>Title</label>
+                <input type="text" id="name" placeholder="Famous five" required>
+            </div>
+            <div class="col s6">
+                <label>Author</label>
+                <input type="text" id="author" placeholder="John Doe" required>
+            </div>
+        </div>
+        <div class="row ">
+            <div class="col s8 ">
+                <label>Isbn</label>
+                <input type="text" id="isbn" placeholder="abhfefdg5421asfv54" required>
+            </div>
+            <div class="col s3 offset-s1">
+                <a  class="btn blue" href="#" id="addbtn"><span>add</span><i class="material-icons">add</i></a>
+            </div>
+        </div>
+        <br>
+        <hr>
+        <div class="disp">
+            <table>
+                <thead>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>isbn</th>
+                    <th></th>
+                </thead>
+                <tbody id="list-body">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
